@@ -38,6 +38,15 @@ class ContactPerson {
 		System.out.println("Zip is : " + zip);
 
 	}
+
+	public void deleteContact() {
+		firstName = " ";
+		lastName = " ";
+		city = " ";
+		state = " ";
+		phoneNumber = 0;
+		zip = 0;
+	}
 }
 
 class AddressBook {
@@ -47,21 +56,34 @@ class AddressBook {
 		ContactPerson contact1 = new ContactPerson();
 		ContactPerson contact2 = new ContactPerson();
 		ContactPerson editContact1 = new ContactPerson();
+		ContactPerson deleteContact1 = new ContactPerson();
 
 		System.out.println("Adding Contact Details of Contact1 Person");
 		contact1.addContact();
+		System.out.println();
 		System.out.println("Displaying Contact Details of Contact1 Person");
 		contact1.printContact();
 
+		System.out.println();
 		System.out.println("Adding Contact Details of Contact2 Person");
 		contact2.addContact();
+		System.out.println();
 		System.out.println("Displaying Contact Details of Contact2 Person");
 		contact2.printContact();
 
+		System.out.println();
 		System.out.println("Editing Contact Details of Contact1 Person");
 		editContact1.addContact();
+		System.out.println();
 		System.out.println("Displaying edited Contact Details of Contact1 Person");
 		editContact1.printContact();
+
+		System.out.println();
+		System.out.println("Deleting Contact Details of Contact1 Person");
+		deleteContact1.deleteContact();
+		System.out.println();
+		System.out.println("Displaying Deleted Contact Details of Contact1 Person");
+		deleteContact1.printContact();
 
 	}
 
